@@ -1,4 +1,5 @@
 # border-radius
+This is a small visual demo that addresses the problem of nested border radii, especially when the outer border radius is handed down to you in %.
 
 ## Project setup
 ```
