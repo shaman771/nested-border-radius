@@ -7,6 +7,8 @@
         :max="50"
         label="Outer border radius, %"
         hint="Set border radius value for the outermost box in % to its width"
+        start-icon="⬜"
+        end-icon="⚪"
       />
       <app-slider
         v-model="outerBorderWidth"

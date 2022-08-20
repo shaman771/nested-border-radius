@@ -3,13 +3,18 @@
     <label :for="id" :title="hint">
       <slot>{{ label }}</slot>
     </label>
-    <input
-      v-bind="$attrs"
-      :id="id"
-      :value="modelValue"
-      type="range"
-      @input="handleInput"
-    />
+    <div class="slider-inner">
+      <span v-if="startIcon">{{ startIcon }}</span>
+      <input
+        v-bind="$attrs"
+        :id="id"
+        :value="modelValue"
+        type="range"
+        @input="handleInput"
+      />
+      <span v-if="endIcon">{{ endIcon }}</span>
+    </div>
+
     <output :for="id">{{ modelValue }}</output>
   </div>
 </template>
@@ -33,6 +38,14 @@ export default {
       type: Number,
       required: true,
     },
+    startIcon: {
+      type: String,
+      default: '',
+    },
+    endIcon: {
+      type: String,
+      default: '',
+    },
   },
   emits: ['update:model-value'],
   setup(props, { emit }) {
@@ -50,8 +63,13 @@ export default {
   display: flex;
   flex-direction: column;
 
+  &-inner {
+    display: flex;
+    align-items: center;
+  }
+
   label {
-    font-size: 0.875em;
+    font-size: 0.75em;
     color: #7a7b7a;
   }
 
