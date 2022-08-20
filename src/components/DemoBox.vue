@@ -1,7 +1,12 @@
 <template>
   <div
     class="box"
-    :style="{ ...$attrs.style, color, backgroundColor: color, borderWidth }"
+    :style="{
+      ...$attrs.style,
+      color,
+      backgroundColor: '#0fc400',
+      borderWidth,
+    }"
   >
     <slot />
   </div>

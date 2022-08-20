@@ -92,7 +92,8 @@
     <footer>
       <p>
         To understand the nature of the problem, turn off the nested border
-        radius calculation and see the result.
+        radius calculation <br />and see the glimpses of the boxes' background
+        color at their corners.
       </p>
       <input id="calcSwitch" v-model="isCalcOn" type="checkbox" />
       <label for="calcSwitch" title="Toggle nested border radius calculation">
